@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="10">
+    <tr>
+        <td colspan="4"><input id="output" type="text"></td>
+    </tr>
+    <tr>
+        <td>
+            <button id="so1" value="1" type="button" onclick="output(this.value)">1</button>
+        </td>
+        <td>
+            <button id="so2" value="2" type="button" onclick="output(this.value)">2</button>
+        </td>
+        <td>
+            <button id="so3" value="3" type="button" onclick="output(this.value)">3</button>
+        </td>
+        <td>
+            <button id="dau+" value="+" type="button" onclick="output(this.value)">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="so4" value="4" type="button" onclick="output(this.value)">4</button>
+        </td>
+        <td>
+            <button id="so5" value="5" type="button" onclick="output(this.value)">5</button>
+        </td>
+        <td>
+            <button id="so6" value="6" type="button" onclick="output(this.value)">6</button>
+        </td>
+        <td>
+            <button id="dau-" value="-" type="button" onclick="output(this.value)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="so7" value="7" type="button" onclick="output(this.value)">7</button>
+        </td>
+        <td>
+            <button id="so8" value="8" type="button" onclick="output(this.value)">8</button>
+        </td>
+        <td>
+            <button id="so9" value="9" type="button" onclick="output(this.value)">9</button>
+        </td>
+        <td>
+            <button id="daux" value="*" type="button" onclick="output(this.value)">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="soC" value="." type="button" onclick="output(this.value)">.</button>
+        </td>
+        <td>
+            <button id="so0" value="0" type="button" onclick="output(this.value)">0</button>
+        </td>
+        <td>
+            <button id="so/" value="/" type="button" onclick="output(this.value)">/</button>
+        </td>
+        <td>
+            <button type="button" onclick="kq()">=</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function output(value) {
+        document.getElementById("output").value += value;
+    }
+
+    function kq() {
+        let x = document.getElementById("output").value;
+        let y = eval(x);
+        document.getElementById("output").value = y;
+    }
+</script>
+</body>
+</html>
